@@ -3,14 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
     <link rel="stylesheet" href="/style.css">
     <title>Music Player</title>
 </head>
-<body class="bg-[#AFDBF5] flex justify-center items-center min-h-screen">
-    <div class="main-card bg-white shadow-xl">
+<body class="bg-[#F5F5F5] flex justify-center items-center min-h-screen">
+    <div class="main-card bg-white shadow-lg shadow-zinc-400 flex flex-col justify-evenly px-4 py-6 w-[400px]">
+        <div class="flex gap-2">
+            <div>
+                <span class="material-symbols-outlined font-bold cursor-pointer">
+                    menu
+                </span>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="uppercase text-sm font-montserrat tracking-wide">Playing Now</h1>
+                <h1 id="title" class="font-raleway font-extrabold text-lg">Flightless Bird, American Mouth</h1>
+                <h2 id="artist" class="font-poppins text-base tracking-wider">Iron & Wine
+                </h2>
+                <div class="mt-5 shadow-lg shadow-slate-400 img-container">
+                    <img src="/images/flightlessBird.jpeg" alt="" class="w-48 object-cover">
+                </div>
+                <audio src="/music/TwilightSoundtrackflightlessBirdAmericanMouth.mp3"  class="mt-10"></audio>
+                <div class="progress-container w-[300px] h-[5px] rounded-full bg-gray-300 mt-9 relative cursor-pointer" id="progress-container">
+                    <div class="progress w-52 absolute h-[5px] rounded bg-emerald-500" id="progress"></div>
+                    <div class="duration-wrapper flex justify-between mt-2 font-poppins text-sm font-medium" id="duration-wrapper">
+                        <span id="current-time">0:00</span>
+                        <span id="song-duration">04:03</span>
+                    </div>
+                </div>
+                <div class="player-controls flex justify-between gap-8 mt-8 cursor-pointer" id="controls">
+                    <span class="material-symbols-outlined rotate-180 text-2xl text-slate-500">
+                        redo
+                    </span>
+                    <span class="material-symbols-outlined text-3xl text-slate-500 select-none" title="Previous" id="previous">
+                        skip_previous
+                    </span>
+                    <span class="material-symbols-outlined text-3xl text-slate-700 hover:transition hover:scale-150 hover:duration-300 hover:ease-in select-none" title="Play" id="play">
+                        play_circle
+                    </span>
+                    <span class="material-symbols-outlined text-3xl text-slate-500 select-none" title="Next" id="next">
+                        skip_next
+                    </span>
+                    <span class="material-symbols-outlined text-2xl text-slate-500">
+                        shuffle
+                    </span>
+                </div>
+            </div>
+            <div>
+                <span class="material-symbols-outlined font-bold cursor-pointer">
+                    add_to_photos
+                </span>
+            </div>
 
+        </div>
+
+        <div>
+            <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, ea, perspiciatis quia incidunt voluptate voluptatem iusto dignissimos ipsam explicabo nemo doloremque cupiditate! Esse cumque nobis pariatur qui suscipit non, labore, maxime impedit illo ratione praesentium id ut ad quae  -->
+        </div>
     </div>
 
     <script src="/script.js"></script>
