@@ -7,7 +7,8 @@ const songTitle = document.querySelector('#title');
 const artist = document.querySelector('#artist');
 const progressbar = document.querySelector('.progress-container');
 const progress = document.querySelector('.progress');
-const all = document.querySelector('#allSongs')
+const all = document.querySelector('#allSongs');
+const allLists = all.querySelectorAll('div');
 
 const songLists = [
     {
@@ -61,6 +62,10 @@ const loadSongs = (songOfSongs) => {
     artist.innerText = songOfSongs.artist;
     song.src = `/music/${songOfSongs.name}.mp3`;
     songImage.src = `/images/${songOfSongs.name}.jpeg`;
+    // all.innerHTML = `<div class="song-lines flex justify-between font-poppins text-sm cursor-pointer mt-5 hover:scale-105 hover:font-medium hover:transition hover:duration-700" id="first">
+    // <h1>${songOfSongs.name.toUpperCase()}</h1>
+    // <span>${songOfSongs.duration}</span>
+    // </div>`.join();
 }
 
 //current song
@@ -97,5 +102,16 @@ const progressBarUpdtae = (e) => {
 previousBtn.addEventListener('click', previousSong);
 nextBtn.addEventListener('click', nextSong);
 song.addEventListener('timeupdate', progressBarUpdtae);
-
-// console.log(all);
+// all.addEventListener('click', (e) => {
+//     for(let listSongs of songLists){
+        
+//         listSongs = song.play();
+//         playBtn.classList.add('fa-circle-pause')
+//         playBtn.classList.remove('fa-circle-play');
+//     }
+//     console.log(e);
+// })
+console.log(allLists);
+for(let singleSong of allLists){
+    singleSong.setAttribute
+}
